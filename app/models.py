@@ -197,30 +197,6 @@ class OperateLog(db.Model):
     def __repr__(self):
         return "<OperateLog %r>" % self.id
 
-# Uncensored
-class Uncensored(db.Model):
-    __tablename__ = "uncensored"
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(255), unique=True)
-    url = db.Column(db.String(255), unique=True)
-    description = db.Column(db.Text)
-    # assert isinstance(db.Column, object)
-    logo = db.Column(db.String(255), unique=True)
-    # star = db.Column(db.SmallInteger)
-    play_num = db.Column(db.BigInteger)
-    comment_num = db.Column(db.BigInteger)
-    studio = db.Column(db.String(100))
-    girl_name = db.Column(db.String(100))
-    release_time = db.Column(db.String(100))
-    length = db.Column(db.String(100))
-    views_num = db.Column(db.BigInteger)
-    add_time = db.Column(db.DateTime, index=True, default=datetime.now)
-    comment = db.relationship('Comment', backref='uncensored')
-    movie_fav = db.relationship('MovieFavorite', backref='uncensored')
-
-    def __repr__(self):
-        return "<Uncensored %r>" % self.id
-
 
 if __name__ == "__main__":
     MovieFavorite.__table__.create(db.session.bind)
