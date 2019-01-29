@@ -28,5 +28,6 @@
 - [fembed](http://www.fembed.com)(An amazing video sharing platform - Free - Fast - Friendly.)
 - [openload](https://openload.co)
 - [streamcherry](https://streamcherry.com)
+
  上面三个都提供非常友好的API, 有兴趣的同学可以把它们的上传API集成到后台管理系统。 其中，fembed除了可以上传视频，转换视频外，还有一个非常nice的torrent模块，支持bt下载(下载速度相当可观哦)
 
