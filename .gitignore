@@ -1,0 +1,5 @@
+.idea/*
+*.py[cod]
+*.so
+*.egg
+**/__pycache__
